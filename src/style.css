@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root{
+  --primary: #bc1f1b;
+  --secondary: #2B2522;
+  --red-background: #881816;
+  --fundo-pagina: #EFEFEF;
+  --fundo2: #FDFDFD;
+  --fundo-card:#F9F8F8;
+  --Rascunho:#B2B9C0;
+  --Andamento:#FFD700;
+  --Para-Aprovacao:#FF7802;
+  --Aprovado:#22B33D;
+  --Reprovado:#BC1F1B;
+  --subtext:#6E7274;
+  --border-dropdown:#DCDEDF;
+  --login-title: #5A1313;
+  
+}
+@font-face {
+  font-family: "Inter_Regular";
+  src: url('./assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal;
+}
