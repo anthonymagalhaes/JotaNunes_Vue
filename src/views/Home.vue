@@ -1,10 +1,9 @@
-<script setup></script>
+<script setup>
+  import Card from '../components/Card.vue';
+</script>
 
 <template>
-  <div>
-    <h1>Home Page</h1>
-    <p>Welcome to the Home Page!</p>
-  </div>
+  <Card/>
 </template>
 
 <style scoped></style>
