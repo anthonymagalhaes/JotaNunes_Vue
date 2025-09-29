@@ -1,15 +1,24 @@
+// App.vue (seu arquivo principal)
+
 <script setup>
-import { RouterView } from "vue-router";
-import NavBar from "./components/NavBar.vue";
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import DefaultLayout from './layouts/DefaultLayout.vue';
+import BlankLayout from './layouts/BlankLayout.vue';
+const route = useRoute();
+
+const layouts = {
+  DefaultLayout,
+  BlankLayout
+};
+
+const currentLayout = computed(() => {
+  return layouts[route.meta.layout] || DefaultLayout;
+});
 </script>
 
 <template>
-  <div class="h-[100dvh] w-screen flex justify-center items-center bg-[var(--fundo-pagina)]">
-    <section class="h-[90dvh] max-w-[1280px] w-full bg-[var(--fundo-card)] relative rounded-t-lg overflow-hidden shadow-[0px_9px_10.9px_rgba(0,0,0,0.05)]">
-      <NavBar />
-      <RouterView />
-    </section>
-  </div>
+    <component :is="currentLayout" />
 </template>
 
 <style scoped></style>
